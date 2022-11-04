@@ -52,7 +52,7 @@ const Home = () => {
             We strive to provide a space where guests can connect with us and
             explore our full potential about agriculture.
           </p>
-          <div className="grid grid-cols-2 relative lg:grid-cols-4 gap-x-3 gap-y-8 lg:gap-y-0 md:gap-x-0 mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 relative lg:grid-cols-4 gap-x-3 gap-y-8 lg:gap-y-0 md:gap-x-0 mt-10">
             <CardService
               label="Seeds"
               description="(Grains, pulses, and oilseeds)"
@@ -284,7 +284,7 @@ const Home = () => {
       <div className="bg-testimonial bg-no-repeat bg-cover">
         <div className="max-w-7xl mx-auto py-16 px-4 mt-10">
           <h1 className="text-[#4F4F4F] text-7xl font-normal">TESTIMONIALS</h1>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-7 mt-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-7 gap-y-10 md:gap-y-0 mt-20">
             <div className="mx-auto text-center">
               <img src={userImage} alt="" className="rounded-full mx-auto" />
               <h1 className="font-bold text-lg mt-5">Bagas</h1>

@@ -6,24 +6,24 @@ const Button = ({ label, icon, className, type, color, isRounded }) => {
   const classname = classNames(
     {
       "bg-[#04B15E] text-white py-3 shadow-md hover:bg-[#049b52] text-lg":
-        color == undefined,
+        color === undefined,
     },
     {
-      "px-4 rounded-lg": type == "md",
+      "px-4 rounded-lg": type === "md",
     },
     {
-      "px-16 rounded-full": type == "lg",
+      "px-16 rounded-full": type === "lg",
     },
     {
-      "rounded-none": isRounded == false,
+      "rounded-none": isRounded === false,
     },
     {
       "bg-[#E6F9F0] text-[#06C167] font-medium text-sm py-2 px-3.5 hover:bg-[#ccfde6]":
-        color == "secondary",
+        color === "secondary",
     },
     {
       "bg-[#FFFFFF] text-[#06C167] border-2 border-[#06C167] font-medium text-sm py-2 px-3.5 hover:bg-[#ccfde6]":
-        color == "light",
+        color === "light",
     },
     className
   );

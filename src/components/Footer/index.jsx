@@ -23,7 +23,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="md:w-3/5 grid grid-cols-1 md:grid-cols-3 gap-y-7 md:gap-y-0 mt-10 md:mt-0">
+        <div className="md:w-3/5 grid grid-cols-1 md:grid-cols-4 gap-y-7 md:gap-y-0 mt-10 md:mt-0">
           <div className="">
             <h1 className="text-[#1D1D1F] font-medium text-xl mb-8">
               About Us
@@ -60,7 +60,7 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className="">
+          <div className="md:col-span-2">
             <h1 className="text-[#1D1D1F] font-medium text-xl mb-8">
               Get in touch
             </h1>
@@ -68,7 +68,7 @@ const Footer = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor
             </p>
-            <form action="" className="flex gap-x-3">
+            <form action="" className="md:flex gap-x-3">
               <input
                 type="text"
                 className="bg-[#F0F1EC] text-[#1D1D1F]/0.5 px-5 py-3"
