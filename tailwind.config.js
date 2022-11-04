@@ -12,6 +12,7 @@ module.exports = {
         feature: "url(/src/assets/images/bg-feature.png)",
         testimonial: "url(/src/assets/images/bg-testi.png)",
         interest: "url(/src/assets/images/interest.png)",
+        gradientAuth: "url(/src/assets/images/bg-auth.png)",
       },
     },
   },

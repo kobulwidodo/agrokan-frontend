@@ -2,7 +2,16 @@ import classNames from "classnames";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Button = ({ label, icon, className, type, color, isRounded }) => {
+const Button = ({
+  label,
+  icon,
+  className,
+  type,
+  color,
+  isRounded,
+  isLink,
+  to,
+}) => {
   const classname = classNames(
     {
       "bg-[#04B15E] text-white py-3 shadow-md hover:bg-[#049b52] text-lg":
@@ -13,6 +22,9 @@ const Button = ({ label, icon, className, type, color, isRounded }) => {
     },
     {
       "px-16 rounded-full": type === "lg",
+    },
+    {
+      "w-full rounded-md": type === "full",
     },
     {
       "rounded-none": isRounded === false,
@@ -28,9 +40,17 @@ const Button = ({ label, icon, className, type, color, isRounded }) => {
     className
   );
   return (
-    <Link to="#" className={classname}>
-      {label}
-    </Link>
+    <>
+      {isLink ? (
+        <Link to="#" className={classname}>
+          {label}
+        </Link>
+      ) : (
+        <button className={classname} type="submit">
+          {label}
+        </button>
+      )}
+    </>
   );
 };
 
