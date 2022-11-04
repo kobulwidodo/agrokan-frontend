@@ -20,7 +20,7 @@ const Signin = () => {
         alt=""
       />
       <div className="grid grid-cols-1 md:grid-cols-3 relative max-w-7xl mx-auto px-4">
-        <div className="hidden sm:block relative col-span-2 min-h-screen">
+        <div className="hidden md:block relative col-span-2 min-h-screen">
           <NavbarAuth />
           <div className="py-52">
             <h1 className="text-5xl font-semibold w-1/2 leading-snug">
@@ -49,7 +49,18 @@ const Signin = () => {
               <h1 className="text-[#04B15E] text-lg">Sign In</h1>
             </div>
           </div>
-          <form action="" className="mt-40">
+          <div className="md:hidden block mt-10">
+            <h1 className="text-5xl text-center font-semibold leading-snug">
+              Sign In to Recharge Direct
+            </h1>
+            <p className="text-xl mt-10 text-center tracking-widest">
+              if you don't an account you can{" "}
+              <Link to="/signup" className="text-[#04B15E] font-semibold">
+                Register here!
+              </Link>
+            </p>
+          </div>
+          <form action="" className="mt-10 md:mt-40">
             <Input margin="mb-5" type="email" placeholder="Enter Email" />
             <Input margin="mb-5" type="password" placeholder="Enter Password" />
             <div className="text-right mb-10">
