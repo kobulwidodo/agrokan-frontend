@@ -45,7 +45,7 @@ const Home = () => {
       </div>
       <div className="bg-home bg-no-repeat bg-cover">
         <div className="max-w-7xl mx-auto py-16 px-4 mt-10">
-          <h1 className="text-[#4F4F4F] text-7xl font-normal">
+          <h1 className="text-[#4F4F4F] text-6xl font-normal">
             PRODUCT & SERVICE
           </h1>
           <p className="text-[#828282] font-normal text-lg mt-4">
@@ -79,7 +79,7 @@ const Home = () => {
       <div className="bg-home bg-no-repeat bg-cover">
         <div className="max-w-7xl flex mx-auto py-16 px-4 mt-10">
           <div className="flex-1">
-            <h1 className="text-[#4F4F4F] text-7xl font-normal">OUR STARS</h1>
+            <h1 className="text-[#4F4F4F] text-6xl font-normal">OUR STARS</h1>
             <h2 className="mt-20 text-[#363636] font-medium text-4xl">
               Organic Farming Goes
             </h2>
@@ -117,7 +117,7 @@ const Home = () => {
       </div>
       <div className="bg-feature bg-cover bg-no-repeat">
         <div className="max-w-7xl mx-auto py-16 px-4 mt-10">
-          <h1 className="text-[#4F4F4F] text-7xl font-normal">OUR FEATURES</h1>
+          <h1 className="text-[#4F4F4F] text-6xl font-normal">OUR FEATURES</h1>
           <h2 className="text-[#003D38] text-5xl font-semibold mt-24 text-center">
             Variety Of Agriculture
           </h2>
@@ -205,7 +205,7 @@ const Home = () => {
         </div>
       </div>
       <div className="max-w-7xl mx-auto py-16 px-4 mt-10">
-        <h1 className="text-[#4F4F4F] text-7xl font-normal">MOST POPULAR</h1>
+        <h1 className="text-[#4F4F4F] text-6xl font-normal">MOST POPULAR</h1>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-x-7">
           <div className="border-2 border-[#76767540] px-10 py-6 mt-20">
             <img src={fertilizer} className="rounded-full mx-auto" alt="" />
@@ -283,7 +283,7 @@ const Home = () => {
       </div>
       <div className="bg-testimonial bg-no-repeat bg-cover">
         <div className="max-w-7xl mx-auto py-16 px-4 mt-10">
-          <h1 className="text-[#4F4F4F] text-7xl font-normal">TESTIMONIALS</h1>
+          <h1 className="text-[#4F4F4F] text-6xl font-normal">TESTIMONIALS</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-7 gap-y-10 md:gap-y-0 mt-20">
             <div className="mx-auto text-center">
               <img src={userImage} alt="" className="rounded-full mx-auto" />
