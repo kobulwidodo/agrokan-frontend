@@ -7,7 +7,7 @@ import cart from "../../assets/images/cart.svg";
 import { Link } from "react-router-dom";
 
 const navigation = [
-  { name: "Home", href: "#", current: true },
+  { name: "Home", href: "/home", current: false },
   { name: "About Us", href: "#", current: false },
   { name: "Article", href: "#", current: false },
   { name: "Pages", href: "#", current: false },
@@ -37,16 +37,20 @@ const Navbar = () => {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="block h-11 w-auto lg:hidden"
-                    src={logo}
-                    alt="Your Company"
-                  />
-                  <img
-                    className="hidden h-11 w-auto lg:block"
-                    src={logoFull}
-                    alt="Your Company"
-                  />
+                  <Link to="/">
+                    <img
+                      className="block h-11 w-auto lg:hidden"
+                      src={logo}
+                      alt="Your Company"
+                    />
+                  </Link>
+                  <Link to="/">
+                    <img
+                      className="hidden h-11 w-auto lg:block"
+                      src={logoFull}
+                      alt="Your Company"
+                    />
+                  </Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">

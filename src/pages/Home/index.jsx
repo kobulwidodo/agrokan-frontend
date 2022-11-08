@@ -1,335 +1,158 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
-import header from "../../assets/images/header.png";
-import ourstars from "../../assets/images/our-stars.png";
-import organicSeed from "../../assets/images/organic-seed.png";
-import agriculuteRent from "../../assets/images/agriculture-rent.png";
-import qualityStandart from "../../assets/images/quality-standard.png";
-import fertilizer from "../../assets/images/fertilizer.png";
-import shovel from "../../assets/images/shovel.png";
-import vegetable from "../../assets/images/fertilizer.png";
-import userImage from "../../assets/images/user-image.png";
-import tour from "../../assets/images/tour.png";
-import comeCloser from "../../assets/images/come-closer.png";
+import { Link } from "react-router-dom";
 import Button from "../../components/Button";
-import iconArrow from "../../assets/icons/arrow-right.svg";
-import seeds from "../../assets/images/seeds-1.svg";
-import agriculture from "../../assets/icons/agriculture.svg";
-import lightningElectric from "../../assets/icons/lightning-electric-energy.svg";
-import tractor from "../../assets/icons/tractor.svg";
-import CardService from "../../components/CardService";
+import Navbar from "../../components/Navbar";
+import shopping from "../../assets/images/shopping.svg";
+import education from "../../assets/images/education.svg";
+import fertilizer from "../../assets/images/fertilizer.svg";
+import farmtrac from "../../assets/images/farmtrac.svg";
+import foxfarm from "../../assets/images/foxfarm.svg";
+import tour from "../../assets/images/tour.svg";
+import videoHome from "../../assets/images/video-home.png";
+import discussion from "../../assets/icons/discussion.svg";
+import phone from "../../assets/icons/phone.svg";
 import Footer from "../../components/Footer";
-import Star from "../../components/Star";
-import StarGold from "../../components/StarGold";
 
 const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="max-w-7xl mx-auto py-10 px-4 flex flex-row">
-        <div className="flex-1 md:pr-10 self-center">
-          <h1 className="text-[#48B760] text-8xl font-black font-roboto">
-            AGRO<span className="text-[#4F4F4F]">KAN</span>
+      <div className="bg-homeHeader bg-cover bg-no-repeat">
+        <div className="max-w-7xl mx-auto py-20 px-4">
+          <h1 className="text-[#003D38] text-5xl font-semibold text-center md:text-left">
+            Join the Agro community
           </h1>
-          <p className="text-[#828282] text-2xl font-normal mt-5 tracking-widest font-poppins">
-            We have created a convenient and free tool for finding profitable
-            offers for goods for the needs of your agricultural enterprise.
+          <p className="text-[#000000]/[.35] mt-10 text-3xl md:w-1/2 text-center md:text-left">
+            you can discuss with others and get consultations to better protect
+            your agricultural enterprise.
           </p>
-          <div className="mt-10">
-            <Button label="Get Started" type="md" icon={iconArrow} />
+          <div className="text-center md:text-left">
+            <Button
+              label="Follow For Join"
+              className="rounded-md font-semibold mt-10 drop-shadow-lg"
+              type="lg"
+            />
           </div>
         </div>
-        <div className="flex-1 hidden md:flex">
-          <img src={header} alt="" />
+      </div>
+      <div className="max-w-7xl mx-auto py-8 px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 bg-white p-4 rounded-xl shadow-lg">
+          <Link to="#">
+            <img src={shopping} className="w-full" alt="" />
+          </Link>
+          <Link to="#">
+            <img src={education} className="w-full" alt="" />
+          </Link>
+          <Link to="#">
+            <img src={tour} className="w-full" alt="" />
+          </Link>
         </div>
       </div>
-      <div className="bg-home bg-no-repeat bg-cover">
-        <div className="max-w-7xl mx-auto py-16 px-4 mt-10">
-          <h1 className="text-[#4F4F4F] text-6xl font-normal">
-            PRODUCT & SERVICE
-          </h1>
-          <p className="text-[#828282] font-normal text-lg mt-4">
-            We strive to provide a space where guests can connect with us and
-            explore our full potential about agriculture.
+      <div className="max-w-7xl mx-auto py-10 px-4">
+        <h2 className="text-center text-[#266937] font-medium text-3xl">
+          BEST SELLERS
+        </h2>
+        <h1 className="text-[#003D38] font-bold text-4xl text-center mt-3">
+          HIGHLIGHTED PRODUCTS
+        </h1>
+        <div className="flex justify-center">
+          <p className="text-[#01312C] text-center mt-5 w-2/3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 relative lg:grid-cols-4 gap-x-3 gap-y-8 lg:gap-y-0 md:gap-x-0 mt-10">
-            <CardService
-              label="Seeds"
-              description="(Grains, pulses, and oilseeds)"
-              image={seeds}
-            />
-            <CardService
-              label="C3P"
-              description="(Crop Crisis Control Project)"
-              image={agriculture}
-            />
-            <CardService
-              label="Fertilizers"
-              description="( Food for plants)"
-              image={lightningElectric}
-            />
-            <CardService
-              label="Tour"
-              description="(Agriculture Tourism)"
-              image={tractor}
-            />
+        </div>
+        <div className="flex justify-center gap-x-8 mt-10">
+          <div className="text-center px-3 py-5 bg-white drop-shadow-xl max-w-xs rounded-xl">
+            <img src={fertilizer} className="mx-auto" alt="" />
+            <h1 className="text-[#01312C] font-semibold mt-5">
+              Fertilizer for Grass
+            </h1>
+            <p className="text-[#01312C] font-normal text-xs mt-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore
+            </p>
+          </div>
+          <div className="text-center px-3 py-5 bg-white drop-shadow-xl max-w-xs rounded-xl">
+            <img src={farmtrac} className="mx-auto" alt="" />
+            <h1 className="text-[#01312C] font-semibold mt-5">
+              Farmtrac 45 Classic Pro
+            </h1>
+            <p className="text-[#01312C] font-normal text-xs mt-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore
+            </p>
+          </div>
+          <div className="text-center px-3 py-5 bg-white drop-shadow-xl max-w-xs rounded-xl">
+            <img src={foxfarm} className="mx-auto" alt="" />
+            <h1 className="text-[#01312C] font-semibold mt-5">
+              FoxFarm - 1 Gallon
+            </h1>
+            <p className="text-[#01312C] font-normal text-xs mt-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore
+            </p>
           </div>
         </div>
-      </div>
-      <div className="bg-home bg-no-repeat bg-cover">
-        <div className="max-w-7xl flex mx-auto py-16 px-4 mt-10">
-          <div className="flex-1">
-            <h1 className="text-[#4F4F4F] text-6xl font-normal">OUR STARS</h1>
-            <h2 className="mt-20 text-[#363636] font-medium text-4xl">
-              Organic Farming Goes
-            </h2>
-            <h2 className="mt-4 text-[#363636] font-medium text-4xl">
-              On And Always On
-            </h2>
-            <div className="flex gap-x-14 mt-20">
-              <div className="text-center">
-                <h1 className="text-[#04B15E] font-semibold text-4xl">1,500</h1>
-                <p className="text-[#1D1D1F]/60 font-normal text-sm mt-3">
-                  Sold Product
-                </p>
-              </div>
-              <div className="text-center">
-                <h1 className="text-[#04B15E] font-semibold text-4xl">500</h1>
-                <p className="text-[#1D1D1F]/60 font-normal text-sm mt-3">
-                  Possitive Feedback
-                </p>
-              </div>
-              <div className="text-center">
-                <h1 className="text-[#04B15E] font-semibold text-4xl">400</h1>
-                <p className="text-[#1D1D1F]/60 font-normal text-sm mt-3">
-                  Official Store
-                </p>
-              </div>
-            </div>
-            <div className="mt-14">
-              <Button label="Get Special Promo" type="md" icon={iconArrow} />
-            </div>
-          </div>
-          <div className="hidden md:flex justify-end">
-            <img src={ourstars} alt="" />
-          </div>
+        <div className="text-center mt-14">
+          <Button
+            isLink={true}
+            to="#"
+            label="View All Product"
+            type="md"
+            className="font-bold"
+          />
         </div>
       </div>
-      <div className="bg-feature bg-cover bg-no-repeat">
-        <div className="max-w-7xl mx-auto py-16 px-4 mt-10">
-          <h1 className="text-[#4F4F4F] text-6xl font-normal">OUR FEATURES</h1>
-          <h2 className="text-[#003D38] text-5xl font-semibold mt-24 text-center">
-            Variety Of Agriculture
+      <div className="bg-stepStart bg-cover bg-no-repeat">
+        <div className="max-w-7xl mx-auto py-10 px-4">
+          <h2 className="text-center text-[#266937] text-xl font-medium mt-28">
+            STEP'S TO START
           </h2>
-          <div className="grid md:grid-cols-2 grid-cols-1 mt-10">
-            <div className="flex items-stretch">
-              <img src={organicSeed} className="w-1/2" alt="" />
-              <div className="bg-[#F3FCF7] grow px-10 py-5 flex w-1/2">
-                <div className="self-center">
-                  <h1 className="text-[#363636] font-medium text-3xl">
-                    Organic
-                  </h1>
-                  <h1 className="text-[#363636] font-medium text-3xl mt-3">
-                    Service
-                  </h1>
-                  <p className="text-[#363636] text-base font-normal mt-5">
-                    We offer the following services
-                  </p>
-                  <div className="mt-10">
-                    <Button label="Discover Now" type="md" color="light" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="flex items-stretch">
-              <img src={agriculuteRent} className="w-1/2" alt="" />
-              <div className="bg-[#F3FCF7] grow px-10 py-5 flex w-1/2">
-                <div className="self-center">
-                  <h1 className="text-[#363636] font-medium text-3xl">
-                    Agricultures
-                  </h1>
-                  <h1 className="text-[#363636] font-medium text-3xl mt-3">
-                    Tools Rent
-                  </h1>
-                  <p className="text-[#363636] text-base font-normal mt-5">
-                    We offer the following services
-                  </p>
-                  <div className="mt-10">
-                    <Button label="Discover Now" type="md" color="light" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="flex items-stretch">
-              <div className="bg-[#F3FCF7] grow px-10 py-5 flex w-1/2">
-                <div className="self-center">
-                  <h1 className="text-[#363636] font-medium text-3xl">
-                    Quality
-                  </h1>
-                  <h1 className="text-[#363636] font-medium text-3xl mt-3">
-                    Standarts
-                  </h1>
-                  <p className="text-[#363636] text-base font-normal mt-5">
-                    We offer the following services
-                  </p>
-                  <div className="mt-10">
-                    <Button label="Discover Now" type="md" color="light" />
-                  </div>
-                </div>
-              </div>
-              <img src={qualityStandart} className="w-1/2" alt="" />
-            </div>
-            <div className="flex items-stretch">
-              <div className="bg-[#F3FCF7] grow px-10 py-5 flex w-1/2">
-                <div className="self-center">
-                  <h1 className="text-[#363636] font-medium text-3xl">
-                    Come Closer
-                  </h1>
-                  <h1 className="text-[#363636] font-medium text-3xl mt-3">
-                    with Agri
-                  </h1>
-                  <h1 className="text-[#363636] font-medium text-3xl mt-3">
-                    Tourism
-                  </h1>
-                  <p className="text-[#363636] text-base font-normal mt-5">
-                    We offer the following services
-                  </p>
-                  <div className="mt-10">
-                    <Button label="Discover Now" type="md" color="light" />
-                  </div>
-                </div>
-              </div>
-              <img src={comeCloser} className="w-1/2" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="max-w-7xl mx-auto py-16 px-4 mt-10">
-        <h1 className="text-[#4F4F4F] text-6xl font-normal">MOST POPULAR</h1>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-7">
-          <div className="border-2 border-[#76767540] px-10 py-6 mt-20">
-            <img src={fertilizer} className="rounded-full mx-auto" alt="" />
-            <Star count={5} />
-            <h1 className="text-[#1D1D1F] text-lg text-center mt-5">
-              Fertilizer for grass
-            </h1>
-            <h4 className="text-[#06C167] text-lg text-center mt-5">
-              Rp 30.000
-            </h4>
-            <div className="text-center mt-7">
-              <Button
-                label="Buy Now"
-                type="md"
-                color="light"
-                isRounded={false}
-              />
-            </div>
-          </div>
-          <div className="border-2 border-[#76767540] px-10 py-6 mt-20">
-            <img src={shovel} className="rounded-full mx-auto" alt="" />
-            <Star count={5} />
-            <h1 className="text-[#1D1D1F] text-lg text-center mt-5">
-              Garden Shovel
-            </h1>
-            <h4 className="text-[#06C167] text-lg text-center mt-5">
-              Rp 72.500
-            </h4>
-            <div className="text-center mt-7">
-              <Button
-                label="Buy Now"
-                type="md"
-                color="light"
-                isRounded={false}
-              />
-            </div>
-          </div>
-          <div className="border-2 border-[#76767540] px-10 py-6 mt-20">
-            <img src={vegetable} className="rounded-full mx-auto" alt="" />
-            <Star count={5} />
-            <h1 className="text-[#1D1D1F] text-lg text-center mt-5">
-              Fresh Vegetable
-            </h1>
-            <h4 className="text-[#06C167] text-lg text-center mt-5">
-              Rp 20.000
-            </h4>
-            <div className="text-center mt-7">
-              <Button
-                label="Buy Now"
-                type="md"
-                color="light"
-                isRounded={false}
-              />
-            </div>
-          </div>
-          <div className="border-2 border-[#76767540] px-10 py-6 mt-20">
-            <img src={tour} className="rounded-full mx-auto" alt="" />
-            <Star count={5} />
-            <h1 className="text-[#1D1D1F] text-lg text-center mt-5">
-              Tour Tickets
-            </h1>
-            <h4 className="text-[#06C167] text-lg text-center mt-5">
-              Rp 150.000
-            </h4>
-            <div className="text-center mt-7">
-              <Button
-                label="Buy Now"
-                type="md"
-                color="light"
-                isRounded={false}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="bg-testimonial bg-no-repeat bg-cover">
-        <div className="max-w-7xl mx-auto py-16 px-4 mt-10">
-          <h1 className="text-[#4F4F4F] text-6xl font-normal">TESTIMONIALS</h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-7 gap-y-10 md:gap-y-0 mt-20">
-            <div className="mx-auto text-center">
-              <img src={userImage} alt="" className="rounded-full mx-auto" />
-              <h1 className="font-bold text-lg mt-5">Bagas</h1>
-              <p className="text-[#696969] text-base font-normal mt-7">
-                “This web really helps me in managing my plantation”
-              </p>
-              <StarGold count={5} />
-            </div>
-            <div className="mx-auto text-center">
-              <img src={userImage} alt="" className="rounded-full mx-auto" />
-              <h1 className="font-bold text-lg mt-5">Bagas</h1>
-              <p className="text-[#696969] text-base font-normal mt-7">
-                “This web really helps me in managing my plantation”
-              </p>
-              <StarGold count={5} />
-            </div>
-            <div className="mx-auto text-center">
-              <img src={userImage} alt="" className="rounded-full mx-auto" />
-              <h1 className="font-bold text-lg mt-5">Bagas</h1>
-              <p className="text-[#696969] text-base font-normal mt-7">
-                “This web really helps me in managing my plantation”
-              </p>
-              <StarGold count={5} />
-            </div>
-            <div className="mx-auto text-center">
-              <img src={userImage} alt="" className="rounded-full mx-auto" />
-              <h1 className="font-bold text-lg mt-5">Bagas</h1>
-              <p className="text-[#696969] text-base font-normal mt-7">
-                “This web really helps me in managing my plantation”
-              </p>
-              <StarGold count={5} />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="bg-interest bg-no-repeat bg-cover">
-        <div className="max-w-7xl mx-auto py-28 px-4 mt-10">
-          <h1 className="text-center font-semibold text-5xl text-white">
-            Interested in our product ?
+          <h1 className="text-[#003D38] text-3xl font-bold text-center mt-2">
+            A SPRING VEGETABLE GARDEN
           </h1>
-          <h1 className="text-center font-semibold text-5xl text-white mt-5">
-            Let's join to try!
-          </h1>
-          <div className="mt-14 text-center">
-            <Button label="Get Started" type="lg" className="rounded-md" />
+          <div className="flex justify-center mt-2">
+            <p className="text-[#01312C] w-1/2 text-center">
+              If you're looking to start a spring vegetable garden, there are a
+              few things you need to know.
+            </p>
+          </div>
+          <div className="mt-10 text-center">
+            <Button
+              isLink={true}
+              to="#"
+              type="lg"
+              className="font-semibold rounded-md"
+              label="Learn More"
+            />
+            <Link to="#">
+              <img
+                src={videoHome}
+                className="w-full max-w-[750px] mx-auto mt-10"
+                alt=""
+              />
+            </Link>
+          </div>
+          <div className="flex flex-wrap gap-y-5 md:gap-y-0 gap-x-8 justify-center mt-16">
+            <Link
+              to="#"
+              className="px-10 py-5 bg-[#429C59] drop-shadow-lg rounded-xl md:max-w-[268px] w-full hover:bg-[#3a8c4e]"
+            >
+              <img src={discussion} className="mx-auto" alt="" />
+              <p className="mt-5 text-white text-center text-xl font-semibold">
+                Discussion With Others
+              </p>
+            </Link>
+            <Link
+              to="#"
+              className="px-10 py-5 bg-[#429C59] drop-shadow-lg rounded-xl md:max-w-[268px] w-full hover:bg-[#3a8c4e]"
+            >
+              <img src={phone} width="42" className="mx-auto" alt="" />
+              <p className="mt-5 text-white text-center text-xl font-semibold">
+                Professional Consultation
+              </p>
+            </Link>
           </div>
         </div>
       </div>

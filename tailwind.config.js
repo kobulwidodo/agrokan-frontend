@@ -13,6 +13,8 @@ module.exports = {
         testimonial: "url(/src/assets/images/bg-testi.png)",
         interest: "url(/src/assets/images/interest.png)",
         gradientAuth: "url(/src/assets/images/bg-auth.png)",
+        homeHeader: "url(/src/assets/images/home-header.png)",
+        stepStart: "url(/src/assets/images/bg-step.png)",
       },
     },
   },
