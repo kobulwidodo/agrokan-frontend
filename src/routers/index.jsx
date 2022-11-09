@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Home from "../pages/Home";
 import LandingPage from "../pages/LandingPage";
+import Product from "../pages/Product";
 import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
 
@@ -24,6 +25,7 @@ const Routers = () => {
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/product" element={<Product />} />
       </Routes>
     </BrowserRouter>
   );

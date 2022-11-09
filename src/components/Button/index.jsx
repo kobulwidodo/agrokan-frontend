@@ -47,7 +47,10 @@ const Button = ({
         </Link>
       ) : (
         <button className={classname} type="submit">
-          {label}
+          <div className="flex justify-center gap-x-3">
+            {icon ? <img src={icon} alt="" /> : null}
+            {label}
+          </div>
         </button>
       )}
     </>

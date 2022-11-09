@@ -291,7 +291,9 @@ const LandingPage = () => {
               <p className="text-[#696969] text-base font-normal mt-7">
                 “This web really helps me in managing my plantation”
               </p>
-              <StarGold count={5} />
+              <div className="mt-5">
+                <StarGold align="center" count={5} />
+              </div>
             </div>
             <div className="mx-auto text-center">
               <img src={userImage} alt="" className="rounded-full mx-auto" />
@@ -299,7 +301,9 @@ const LandingPage = () => {
               <p className="text-[#696969] text-base font-normal mt-7">
                 “This web really helps me in managing my plantation”
               </p>
-              <StarGold count={5} />
+              <div className="mt-5">
+                <StarGold align="center" count={5} />
+              </div>
             </div>
             <div className="mx-auto text-center">
               <img src={userImage} alt="" className="rounded-full mx-auto" />
@@ -307,7 +311,9 @@ const LandingPage = () => {
               <p className="text-[#696969] text-base font-normal mt-7">
                 “This web really helps me in managing my plantation”
               </p>
-              <StarGold count={5} />
+              <div className="mt-5">
+                <StarGold align="center" count={5} />
+              </div>
             </div>
             <div className="mx-auto text-center">
               <img src={userImage} alt="" className="rounded-full mx-auto" />
@@ -315,7 +321,9 @@ const LandingPage = () => {
               <p className="text-[#696969] text-base font-normal mt-7">
                 “This web really helps me in managing my plantation”
               </p>
-              <StarGold count={5} />
+              <div className="mt-5">
+                <StarGold align="center" count={5} />
+              </div>
             </div>
           </div>
         </div>
