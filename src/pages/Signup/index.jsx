@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import bgGradient from "../../assets/images/bg-auth.png";
 import humanFall from "../../assets/images/human-fall.png";
 import orContinue from "../../assets/images/or-continue.svg";
@@ -10,8 +10,80 @@ import arrowDown from "../../assets/icons/arrow-down.svg";
 import Button from "../../components/Button";
 import Input from "../../components/Input";
 import NavbarAuth from "../../components/NavbarAuth";
+import { useState } from "react";
+import useSnackbar from "../../hooks/useSnackbar";
+import { registerUser } from "../../api/model/user";
+
+const formData = {
+  email: {
+    value: "",
+    required: true,
+  },
+  phone_number: {
+    value: "",
+    required: true,
+  },
+  password: {
+    value: "",
+    required: true,
+  },
+};
 
 const Signup = () => {
+  const [data, setData] = useState(formData);
+  const [errors, setErrors] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
+  const snackbar = useSnackbar();
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setData({
+      ...data,
+      [e.target.name]: {
+        ...data[e.target.name],
+        value: e.target.value,
+      },
+    });
+  };
+
+  const validateData = () => {
+    let errorsData = {};
+    Object.keys(data).forEach((key) => {
+      const dataCheck = data[key];
+      if (dataCheck.required) {
+        if (!dataCheck.value) {
+          errorsData = {
+            ...errorsData,
+            [key]: `${key + " tidak boleh kosong"}`,
+          };
+        }
+      }
+    });
+    setErrors(errorsData);
+    return Object.keys(errorsData).length < 1;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (validateData()) {
+      try {
+        setIsSubmit(true);
+        const res = await registerUser(
+          data.email.value,
+          data.phone_number.value,
+          data.password.value
+        );
+        snackbar.success(res.data.meta.message);
+        navigate("/signin");
+      } catch (error) {
+        console.log(error);
+        snackbar.error(error.response?.data.meta.message ?? error);
+      } finally {
+        setIsSubmit(false);
+      }
+    }
+  };
+
   return (
     <>
       <img
@@ -60,14 +132,28 @@ const Signup = () => {
               </Link>
             </p>
           </div>
-          <form action="" className="mt-10 md:mt-40">
-            <Input margin="mb-5" type="text" placeholder="Enter Email" />
+          <form className="mt-10 md:mt-40" onSubmit={handleSubmit}>
+            <Input
+              margin="mb-5"
+              type="text"
+              placeholder="Enter Email"
+              name="email"
+              onChange={handleChange}
+            />
             <Input
               margin="mb-5"
               type="number"
               placeholder="Enter Phone Number"
+              name="phone_number"
+              onChange={handleChange}
             />
-            <Input margin="mb-5" type="password" placeholder="Enter Password" />
+            <Input
+              margin="mb-5"
+              type="password"
+              placeholder="Enter Password"
+              name="password"
+              onChange={handleChange}
+            />
             <div className="">
               <Button
                 label="Sign Up"

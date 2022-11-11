@@ -11,11 +11,16 @@ const Button = ({
   isRounded,
   isLink,
   to,
+  isAuth,
 }) => {
   const classname = classNames(
     {
       "bg-[#04B15E] text-white py-3 shadow-md hover:bg-[#049b52] text-lg":
         color === undefined,
+    },
+    {
+      "bg-white rounded-full text-[#0D9A56] text-lg px-8 py-2 hover:text-white":
+        isAuth === true,
     },
     {
       "px-4 rounded-lg": type === "md",
@@ -42,7 +47,7 @@ const Button = ({
   return (
     <>
       {isLink ? (
-        <Link to="#" className={classname}>
+        <Link to={to} className={classname}>
           {label}
         </Link>
       ) : (

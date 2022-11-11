@@ -1,10 +1,13 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { UserWrapper } from "../context/UserContext";
+import Education from "../pages/Education";
 import Home from "../pages/Home";
 import LandingPage from "../pages/LandingPage";
 import Product from "../pages/Product";
 import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
+import AuthRoute from "./AuthRoute";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -20,13 +23,18 @@ const Routers = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/signin" element={<Signin />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/product" element={<Product />} />
-      </Routes>
+      <UserWrapper>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route element={<AuthRoute />}>
+            <Route path="/signin" element={<Signin />} />
+            <Route path="/signup" element={<Signup />} />
+          </Route>
+          <Route path="/home" element={<Home />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/education" element={<Education />} />
+        </Routes>
+      </UserWrapper>
     </BrowserRouter>
   );
 };

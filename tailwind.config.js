@@ -15,6 +15,7 @@ module.exports = {
         gradientAuth: "url(/src/assets/images/bg-auth.png)",
         homeHeader: "url(/src/assets/images/home-header.png)",
         stepStart: "url(/src/assets/images/bg-step.png)",
+        tractorHeader: "url(/src/assets/images/tractor-header.png)",
       },
     },
   },
