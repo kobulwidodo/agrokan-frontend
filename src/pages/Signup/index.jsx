@@ -31,8 +31,6 @@ const formData = {
 
 const Signup = () => {
   const [data, setData] = useState(formData);
-  const [errors, setErrors] = useState({});
-  const [isSubmit, setIsSubmit] = useState(false);
   const snackbar = useSnackbar();
   const navigate = useNavigate();
 
@@ -59,7 +57,6 @@ const Signup = () => {
         }
       }
     });
-    setErrors(errorsData);
     return Object.keys(errorsData).length < 1;
   };
 
@@ -67,7 +64,6 @@ const Signup = () => {
     e.preventDefault();
     if (validateData()) {
       try {
-        setIsSubmit(true);
         const res = await registerUser(
           data.email.value,
           data.phone_number.value,
@@ -79,7 +75,6 @@ const Signup = () => {
         console.log(error);
         snackbar.error(error.response?.data.meta.message ?? error);
       } finally {
-        setIsSubmit(false);
       }
     }
   };

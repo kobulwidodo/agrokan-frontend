@@ -28,8 +28,6 @@ const formData = {
 
 const Signin = () => {
   const [data, setData] = useState(formData);
-  const [errors, setErrors] = useState({});
-  const [isSubmit, setIsSubmit] = useState(false);
   const snackbar = useSnackbar();
 
   const { login } = useUserContext();
@@ -57,7 +55,6 @@ const Signin = () => {
         }
       }
     });
-    setErrors(errorsData);
     return Object.keys(errorsData).length < 1;
   };
 
@@ -66,7 +63,6 @@ const Signin = () => {
     console.log(data);
     if (validateData()) {
       try {
-        setIsSubmit(true);
         const res = await loginUser(data.email.value, data.password.value);
         login(res.data.data.token);
         snackbar.success(res.data.meta.message);
@@ -74,7 +70,6 @@ const Signin = () => {
         console.log(error);
         snackbar.error(error.response?.data.meta.message);
       } finally {
-        setIsSubmit(false);
       }
     }
   };
