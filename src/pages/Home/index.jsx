@@ -37,13 +37,13 @@ const Home = () => {
       </div>
       <div className="max-w-7xl mx-auto py-8 px-4">
         <div className="grid grid-cols-1 sm:grid-cols-3 bg-white p-4 rounded-xl shadow-lg">
-          <Link to="#">
+          <Link to="/product">
             <img src={shopping} className="w-full" alt="" />
           </Link>
-          <Link to="#">
+          <Link to="/education">
             <img src={education} className="w-full" alt="" />
           </Link>
-          <Link to="#">
+          <Link to="/tour">
             <img src={tour} className="w-full" alt="" />
           </Link>
         </div>
@@ -136,7 +136,7 @@ const Home = () => {
           </div>
           <div className="flex flex-wrap gap-y-5 md:gap-y-0 gap-x-8 justify-center mt-16">
             <Link
-              to="#"
+              to="/discussion"
               className="px-10 py-5 bg-[#429C59] drop-shadow-lg rounded-xl md:max-w-[268px] w-full hover:bg-[#3a8c4e]"
             >
               <img src={discussion} className="mx-auto" alt="" />
