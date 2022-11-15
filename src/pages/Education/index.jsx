@@ -16,7 +16,6 @@ import gardening from "../../assets/icons/gardening.svg";
 import plants from "../../assets/icons/plants.svg";
 import health from "../../assets/icons/health.svg";
 import finance from "../../assets/icons/finance.svg";
-import tractorEdu from "../../assets/icons/tractor-edu.svg";
 import developmentEdu from "../../assets/icons/development-edu.svg";
 import StarGold from "../../components/StarGold";
 import EducationCategory from "../../components/EducationCategory";
